@@ -2,6 +2,9 @@
 let express = require('express')
 let db = require('./db')
 let app = express()
+require('dotenv').config()
+
+const PORT = process.env.PORT||3000
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
@@ -19,4 +22,4 @@ app.use('/menu',menuRoutes)
 
 
 
-app.listen(3000, (() => console.log('server 3000 available')))
+app.listen(PORT, (() => console.log('server 3000 available')))

@@ -74,7 +74,7 @@ menuRoutes.post('/', async (req, res) => {
     let response = await newItem.save()
     console.log('post- data menu')
     res.status(200).json(response)
-
+ 
   } catch (error) {
     console.log(error)
     res.status(500).json({ error: "internal Error" })
